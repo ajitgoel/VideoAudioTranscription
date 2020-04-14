@@ -1,0 +1,26 @@
+{
+	"auth": {
+		"videoaudiotranscriptc2b9fc63": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"api": {
+		"videoaudiotranscript": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authvideoaudiotranscriptc2b9fc63"
+						}
+					}
+				}
+			}
+		}
+	}
+}
